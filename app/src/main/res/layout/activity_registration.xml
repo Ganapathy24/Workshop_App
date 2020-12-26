@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/bgg1"
+
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="REGISTER"
+            android:textSize="50dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:elevation="20dp"></TextView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/policebg"
+            >
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_margin="10dp"
+                android:layout_height="100dp"
+                android:background="@drawable/register"></ImageView>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:text="Content marketing is more than a buzzword"
+            android:textColor="#ffffff"
+            android:elevation="10dp"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:textStyle="italic"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="20dp"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="NAME"
+                    android:textColor="#000000"
+                    android:layout_margin="10dp"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"></TextView>
+                <EditText
+                    android:id="@+id/ownername"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/roundcorners"
+                    android:padding="8dp"
+                    android:elevation="10dp"
+
+                    android:layout_margin="10dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter your name" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="SHOP NAME"
+                    android:textColor="#000000"
+                    android:layout_margin="10dp"
+
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"></TextView>
+                <EditText
+                    android:id="@+id/shopname"
+                    android:layout_width="match_parent"
+                    android:elevation="10dp"
+
+                    android:background="@drawable/roundcorners"
+                    android:padding="8dp"
+                    android:layout_margin="10dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter your shop name" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@color/white"
+
+                android:orientation="horizontal">
+                <Spinner
+                    android:id="@+id/categoryname"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:entries="@array/category_list"
+                    android:prompt="@string/category" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="PHONE NUMBER"
+                    android:textColor="#000000"
+                    android:layout_margin="8dp"
+
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"></TextView>
+                <EditText
+                    android:id="@+id/phonenumber"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/roundcorners"
+                    android:padding="8dp"
+                    android:layout_margin="8dp"
+                    android:inputType="number"
+                    android:elevation="10dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Your Phone Number" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="350dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:id="@+id/crime_image"
+                android:visibility="gone"
+                ></ImageView>
+        </LinearLayout>
+
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Register"
+            android:textStyle="bold"
+            android:elevation="20dp"
+            android:id="@+id/submit_btn"
+            android:textColor="#ffffff"
+            android:background="@drawable/regbutton"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            ></Button>
+    </LinearLayout>
+
+</ScrollView>

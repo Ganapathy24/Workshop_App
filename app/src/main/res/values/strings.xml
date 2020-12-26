@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Workshop</string>
+
+    <string name="category">Choose your shop category</string>
+
+    <string-array name="category_list">
+        <item>WorkShop</item>
+        <item>Battery Shop</item>
+        <item>Ambulance</item>
+        <item>Petrol Bunk</item>
+    </string-array>
+</resources>
