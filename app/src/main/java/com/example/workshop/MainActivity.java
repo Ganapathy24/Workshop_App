@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent send = new Intent(MainActivity.this, Registration.class);
-                startActivity(send);
+                Intent register = new Intent(MainActivity.this, Registration.class);
+                startActivity(register);
             }
         });
 
@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                Intent services = new Intent(MainActivity.this, Services.class);
+                startActivity(services);
             }
         });
 
