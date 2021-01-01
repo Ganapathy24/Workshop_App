@@ -31,6 +31,7 @@
                 android:background="@drawable/regbutton1"
                 android:layout_margin="10dp"
                 android:elevation="20dp"
+                android:id="@+id/workshoplist"
                 android:layout_height="wrap_content">
                 <ImageView
                     android:layout_width="70dp"
@@ -58,6 +59,7 @@
                 android:background="@drawable/regbutton1"
                 android:layout_margin="10dp"
                 android:elevation="20dp"
+                android:id="@+id/batteryshoplist"
                 android:layout_height="wrap_content">
                 <ImageView
                     android:layout_width="70dp"
@@ -85,6 +87,7 @@
                 android:background="@drawable/regbutton1"
                 android:layout_margin="10dp"
                 android:elevation="20dp"
+                android:id="@+id/medicallist"
                 android:layout_height="wrap_content">
                 <ImageView
                     android:layout_width="70dp"
@@ -112,6 +115,7 @@
                 android:background="@drawable/regbutton1"
                 android:layout_margin="10dp"
                 android:elevation="20dp"
+                android:id="@+id/ambulancelist"
                 android:layout_height="wrap_content">
                 <ImageView
                     android:layout_width="70dp"
@@ -166,6 +170,7 @@
                 android:layout_width="match_parent"
                 android:background="@drawable/regbutton1"
                 android:layout_margin="10dp"
+                android:id="@+id/petrolbunklist"
                 android:elevation="20dp"
                 android:layout_height="wrap_content">
                 <ImageView

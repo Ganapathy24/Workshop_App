@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/regbutton1"
+        android:layout_margin="10dp"
+        android:elevation="20dp"
+        android:weightSum="2"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/battery"
+            android:layout_marginHorizontal="20dp"></ImageView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/btn1"
+
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="WORKSHOP 1"
+                android:layout_margin="5dp"
+                android:textStyle="bold"
+                android:id="@+id/name"
+                android:background="#F0FFF0"
+                android:textColor="#000000"
+                ></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="Name of the person"
+                android:layout_margin="5dp"
+                android:id="@+id/shop"
+                android:background="#F0FFF0"
+                android:textColor="#000000"
+                ></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="Distance"
+                android:id="@+id/category"
+                android:layout_margin="5dp"
+                android:background="#F0FFF0"
+                android:textColor="#000000"
+                ></TextView>
+            <!--       <TextView-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:textSize="15dp"-->
+            <!--            android:text="Number"-->
+            <!--            android:id="@+id/phone"-->
+            <!--            android:layout_margin="5dp"-->
+            <!--            android:background="#F0FFF0"-->
+            <!--            android:textColor="#000000"-->
+            <!--            ></TextView>-->
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!--    <TextView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:textSize="15dp"-->
+    <!--        android:id="@+id/location_id"-->
+    <!--        android:layout_margin="5dp"-->
+    <!--        android:background="#F0FFF0"-->
+    <!--        android:textColor="#000000"-->
+    <!--        ></TextView>-->
+
+    <!--    <FrameLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:background="@drawable/regbutton1"-->
+    <!--        android:layout_margin="10dp"-->
+    <!--        android:elevation="20dp"-->
+    <!--        android:layout_height="wrap_content">-->
+    <!--        <ImageView-->
+    <!--            android:layout_width="70dp"-->
+    <!--            android:layout_height="70dp"-->
+
+    <!--            android:layout_gravity="center_vertical"-->
+    <!--            android:background="@drawable/workshop"-->
+    <!--            android:layout_marginHorizontal="20dp"></ImageView>-->
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="90dp"-->
+    <!--            android:textSize="20dp"-->
+    <!--            android:text="WORKSHOP 2"-->
+    <!--            android:layout_margin="10dp"-->
+    <!--            android:textStyle="bold"-->
+    <!--            android:gravity="center"-->
+    <!--            android:background="#F0FFF0"-->
+    <!--            android:id="@+id/btn2"-->
+    <!--            android:textColor="#000000"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            ></TextView>-->
+    <!--    </FrameLayout>-->
+
+
+
+    <!--        <Button-->
+    <!--        android:id="@+id/btn7"-->
+    <!--        android:layout_width="150dp"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:background="@drawable/regbutton"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:layout_margin="10dp"-->
+    <!--        android:text="back"-->
+    <!--        android:textStyle="bold"-->
+    <!--        android:textColor="#ffffff"-->
+    <!--        ></Button>-->
+</LinearLayout>
