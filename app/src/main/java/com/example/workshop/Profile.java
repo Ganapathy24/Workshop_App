@@ -21,21 +21,22 @@ public class Profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        UserEntity ue = (UserEntity) getIntent().getSerializableExtra("details");
+        String username = getIntent().getStringExtra("username");
+        String sname = getIntent().getStringExtra("shopname");
+        String phone =getIntent().getStringExtra("phone");
+        String category = getIntent().getStringExtra("category");
 
         img1 = (ImageView) findViewById(R.id.img1);
         TextView name = findViewById(R.id.ownername);
         TextView shopname = findViewById(R.id.shopname);
 
-        name.setText(ue.getPhoneNumber());
-        shopname.setText(ue.getShopName());
-
-
+        name.setText(username);
+        shopname.setText(sname);
 
         img1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
                 Intent callIntent = new Intent(Intent.ACTION_CALL);
-                callIntent.setData(Uri.parse("tel:"+ ue.getPhoneNumber()));
+                callIntent.setData(Uri.parse("tel:"+ phone));
                 if (ActivityCompat.checkSelfPermission(Profile.this,
                         Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                     return;

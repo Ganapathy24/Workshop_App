@@ -21,6 +21,7 @@ import com.google.gson.JsonElement;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ServiceList extends AppCompatActivity {
 
@@ -68,7 +69,15 @@ public class ServiceList extends AppCompatActivity {
             public void onClick(View view, final int position) {
                 //Values are passing to activity & to fragment as well
                 Intent intent = new Intent(ServiceList.this, Profile.class);
-                intent.putExtra("details", (Serializable) list.get(position));
+                UserEntity ue = list.get(position);
+                String name = ue.getName();
+                String shopname = ue.getShopName();
+                String phone = ue.getPhoneNumber();
+                String category = ue.getCategory();
+                intent.putExtra("username", name );
+                intent.putExtra("shopname", shopname );
+                intent.putExtra("phone", phone );
+                intent.putExtra("category", category );
                 startActivity(intent);
             }
 
