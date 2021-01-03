@@ -5,8 +5,8 @@
 
     <string-array name="category_list">
         <item>WorkShop</item>
-        <item>Battery Shop</item>
+        <item>BatteryShop</item>
         <item>Ambulance</item>
-        <item>Petrol Bunk</item>
+        <item>PetrolBunk</item>
     </string-array>
 </resources>

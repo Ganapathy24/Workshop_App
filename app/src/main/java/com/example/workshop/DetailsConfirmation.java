@@ -19,6 +19,7 @@ import com.google.gson.Gson;
 
 import org.json.JSONObject;
 import org.json.JSONTokener;
+import org.w3c.dom.Text;
 
 import java.io.IOException;
 
@@ -34,6 +35,8 @@ public class DetailsConfirmation extends AppCompatActivity {
         String shopname = getIntent().getStringExtra("shopname");
         String category = getIntent().getStringExtra("category");
         String phoneNumber = getIntent().getStringExtra("phonenumber");
+        String latitude = getIntent().getStringExtra("latitude");
+        String longitude = getIntent().getStringExtra("longitude");
 
         Log.d("Data ", phoneNumber);
 
@@ -41,12 +44,16 @@ public class DetailsConfirmation extends AppCompatActivity {
         TextView sName = findViewById(R.id.sName);
         TextView categoryText = findViewById(R.id.categoryId);
         TextView phone = findViewById(R.id.pNumber);
+        TextView location = findViewById(R.id.location);
         Button submit_btn = findViewById(R.id.submit_btn);
+        String combinedLoc = "Latitude" + latitude + "\n" + "Longitude" + longitude;
 
         ownerName.setText(name);
         sName.setText(shopname);
         categoryText.setText(category);
         phone.setText(phoneNumber);
+        location.setText(combinedLoc);
+
 
         Gson gson = new Gson();
 
@@ -57,11 +64,11 @@ public class DetailsConfirmation extends AppCompatActivity {
                 String json = null;
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference myRef = database.getReference(category);
-                UserEntity ue = new UserEntity(name, shopname, category ,phoneNumber, "");
+                UserEntity ue = new UserEntity(name, shopname, category ,phoneNumber, latitude, longitude );
                 json = gson.toJson(ue);
                 myRef.child(id+"").setValue(json);
                 Toast.makeText(DetailsConfirmation.this, "Stored Successfully", Toast.LENGTH_SHORT).show();
-
+                id++;
             }
         });
 

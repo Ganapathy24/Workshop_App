@@ -17,8 +17,6 @@ import java.util.ArrayList;
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyViewHolder> {
 
     Context context;
-
-
     ArrayList<UserEntity> members;
 
     public CategoryAdapter(Context c , ArrayList<UserEntity> p)
@@ -39,8 +37,6 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
         holder.shop.setText(members.get(position).getShopName());
         holder.category.setText(members.get(position).getCategory());
 //        holder.phone.setText(members.get(position).getPhone());
-
-
     }
 
     @Override
@@ -51,8 +47,6 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
     class MyViewHolder extends RecyclerView.ViewHolder
     {
         TextView name,shop,category;
-
-
         public MyViewHolder(View itemView) {
             super(itemView);
             name = (TextView) itemView.findViewById(R.id.name);

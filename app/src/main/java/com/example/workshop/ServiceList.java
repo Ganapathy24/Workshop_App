@@ -57,7 +57,6 @@ public class ServiceList extends AppCompatActivity {
 
             }
 
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 Toast.makeText(ServiceList.this, "Opsss.... Something is wrong", Toast.LENGTH_SHORT).show();
@@ -74,10 +73,14 @@ public class ServiceList extends AppCompatActivity {
                 String shopname = ue.getShopName();
                 String phone = ue.getPhoneNumber();
                 String category = ue.getCategory();
-                intent.putExtra("username", name );
-                intent.putExtra("shopname", shopname );
-                intent.putExtra("phone", phone );
-                intent.putExtra("category", category );
+                String latitute = ue.getLatitute();
+                String longitute = ue.getLongitute();
+                intent.putExtra("username", name);
+                intent.putExtra("shopname", shopname);
+                intent.putExtra("phone", phone);
+                intent.putExtra("category", category);
+                intent.putExtra("latitute", latitute);
+                intent.putExtra("longitute", longitute);
                 startActivity(intent);
             }
 
