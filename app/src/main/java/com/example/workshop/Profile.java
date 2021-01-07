@@ -18,6 +18,7 @@ import android.widget.Toast;
 public class Profile extends AppCompatActivity {
 
     ImageView img1,img2;
+    String url;
     private static final int MY_PERMISSIONS_REQUEST_SEND_SMS =0 ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +61,7 @@ public class Profile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String url = "https://maps.google.com/?q=<"+latitute+">,<"+longitute+">";
-                sendSMSMessage();
+                sendSMSMessage(url);
                 //Toast.makeText(Profile.this, "LOCATION SENT ", Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(Intent.ACTION_VIEW);
                 i.setData(Uri.parse(url));
@@ -70,7 +71,9 @@ public class Profile extends AppCompatActivity {
             }
         });
     }
-    protected void sendSMSMessage() {
+    protected void sendSMSMessage(String url) {
+
+        this.url=url;
 
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.SEND_SMS)
@@ -92,7 +95,7 @@ public class Profile extends AppCompatActivity {
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     SmsManager smsManager = SmsManager.getDefault();
-                    smsManager.sendTextMessage("7639210637", null, "Hello", null, null);
+                    smsManager.sendTextMessage( "9790432442", null, url, null, null);
                     Toast.makeText(Profile.this, "SMS sent.",
                             Toast.LENGTH_LONG).show();
                 } else {

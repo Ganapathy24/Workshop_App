@@ -1,200 +1,232 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@drawable/bgg4"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/bggg1"
     android:layout_height="match_parent">
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textSize="25dp"-->
+<!--        android:text="Services Provided "-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_margin="20dp"-->
+<!--        android:elevation="5dp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textColor="#000000"-->
+<!--        ></TextView>-->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+  >
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="List of Services"
-            android:gravity="center"
-            android:textSize="25dp"
-            android:elevation="20dp"
-            android:textStyle="bold"
-            android:padding="5dp"
-            android:layout_margin="20dp"
-            android:textColor="#ffffff"
-            ></TextView>
-
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="20dp"
             android:orientation="vertical">
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:background="@drawable/regbutton1"
-                android:layout_margin="10dp"
-                android:elevation="20dp"
-                android:id="@+id/workshoplist"
-                android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:background="@drawable/policebg"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:id="@+id/workshoplist"
+            android:padding="5dp"
+
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_margin="17dp"
+                android:gravity="center">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/workshop"
+                android:layout_gravity="center"
+                android:background="@drawable/workshop"
+                ></ImageView>
                 <ImageView
-                    android:layout_width="70dp"
+                    android:id="@+id/shine"
+                    android:layout_width="50dp"
+                    android:padding="4dp"
                     android:layout_height="70dp"
+                    android:layout_marginLeft="-50dp"
+                    android:src="@drawable/shine"/>
 
-                    android:layout_gravity="center_vertical"
-                    android:background="@drawable/workshop"
-                    android:layout_marginHorizontal="10dp"></ImageView>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="90dp"
-                    android:textSize="20dp"
-                    android:text="WORKSHOP"
-                    android:layout_margin="10dp"
-                    android:textStyle="bold"
-                    android:background="#F0FFF0"
-                    android:id="@+id/btn1"
-                    android:gravity="center"
-                    android:textColor="#000000"
-                    android:layout_gravity="center"
-                    ></TextView>
-            </FrameLayout>
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:background="@drawable/regbutton1"
-                android:layout_margin="10dp"
-                android:elevation="20dp"
-                android:id="@+id/batteryshoplist"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-
-                    android:layout_gravity="center_vertical"
-                    android:background="@drawable/battery"
-                    android:layout_marginHorizontal="10dp"></ImageView>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="90dp"
-                    android:textSize="20dp"
-                    android:text="BATTERY SHOP"
-                    android:layout_margin="10dp"
-                    android:textStyle="bold"
-                    android:background="#F0FFF0"
-                    android:gravity="center"
-                    android:id="@+id/btn2"
-                    android:textColor="#000000"
-                    android:layout_gravity="center"
-                    ></TextView>
-            </FrameLayout>
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:background="@drawable/regbutton1"
-                android:layout_margin="10dp"
-                android:elevation="20dp"
-                android:id="@+id/medicallist"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-
-                    android:layout_gravity="center_vertical"
-                    android:background="@drawable/medics"
-                    android:layout_marginHorizontal="10dp"></ImageView>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="90dp"
-                    android:textSize="20dp"
-                    android:text="MEDICALS"
-                    android:layout_margin="10dp"
-                    android:textStyle="bold"
-                    android:background="#F0FFF0"
-                    android:id="@+id/btn3"
-                    android:gravity="center"
-                    android:textColor="#000000"
-                    android:layout_gravity="center"
-                    ></TextView>
-            </FrameLayout>
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:background="@drawable/regbutton1"
-                android:layout_margin="10dp"
-                android:elevation="20dp"
-                android:id="@+id/ambulancelist"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-
-                    android:layout_gravity="center_vertical"
-                    android:background="@drawable/ambulance"
-                    android:layout_marginHorizontal="10dp"></ImageView>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="90dp"
-                    android:textSize="20dp"
-                    android:text="AMBULANCE"
-                    android:layout_margin="10dp"
-                    android:gravity="center"
-                    android:textStyle="bold"
-                    android:background="#F0FFF0"
-                    android:id="@+id/btn4"
-                    android:textColor="#000000"
-                    android:layout_gravity="center"
-                    ></TextView>
-            </FrameLayout>
-
-            <!--        <FrameLayout-->
-            <!--            android:layout_width="match_parent"-->
-            <!--            android:background="@drawable/regbutton1"-->
-            <!--            android:layout_margin="10dp"-->
-            <!--            android:elevation="20dp"-->
-            <!--            android:layout_height="wrap_content">-->
-            <!--            <ImageView-->
-            <!--                android:layout_width="70dp"-->
-            <!--                android:layout_height="70dp"-->
-
-            <!--                android:layout_gravity="center_vertical"-->
-            <!--                android:background="@drawable/ambulance"-->
-            <!--                android:layout_marginHorizontal="10dp"></ImageView>-->
-            <!--            <TextView-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="90dp"-->
-            <!--                android:textSize="20dp"-->
-            <!--                android:text="AMBULANCE"-->
-            <!--                android:layout_margin="10dp"-->
-            <!--                android:gravity="center"-->
-            <!--                android:textStyle="bold"-->
-            <!--                android:background="#F0FFF0"-->
-            <!--                android:id="@+id/btn5"-->
-            <!--                android:textColor="#000000"-->
-            <!--                android:layout_gravity="center"-->
-            <!--                ></TextView>-->
-            <!--        </FrameLayout>-->
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:background="@drawable/regbutton1"
-                android:layout_margin="10dp"
-                android:id="@+id/petrolbunklist"
-                android:elevation="20dp"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-
-                    android:layout_gravity="center_vertical"
-                    android:background="@drawable/petrolpump"
-                    android:layout_marginHorizontal="10dp"></ImageView>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="90dp"
-                    android:textSize="20dp"
-                    android:text="PETROL BUNK"
-                    android:layout_margin="10dp"
-                    android:gravity="center"
-                    android:textStyle="bold"
-                    android:background="#F0FFF0"
-                    android:id="@+id/btn6"
-                    android:textColor="#000000"
-                    android:layout_gravity="center"
-                    ></TextView>
-            </FrameLayout>
+            </RelativeLayout>
 
         </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:text="WORKSHOP"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:id="@+id/name"
+                android:textColor="#ffffff"
+                ></TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_margin="20dp"
+
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:background="@drawable/policebg"
+            android:orientation="vertical"
+            android:id="@+id/batteryshoplist"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="17dp"
+                android:gravity="center">
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/battery"
+                android:layout_gravity="center"
+                android:background="@drawable/battery"
+                ></ImageView>
+                <ImageView
+                    android:id="@+id/shine1"
+                    android:layout_width="50dp"
+                    android:padding="4dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="-50dp"
+                    android:src="@drawable/shine"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:text="BATTERY"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                ></TextView>
+        </LinearLayout>
+
     </LinearLayout>
-</ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_margin="20dp"
+
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:background="@drawable/policebg"
+            android:id="@+id/ambulancelist"
+            android:padding="5dp"
+            android:layout_margin="10dp"
+
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="17dp"
+                android:gravity="center">
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/ambulance"
+                android:layout_gravity="center"
+                android:background="@drawable/ambulance"
+                ></ImageView>
+            <ImageView
+                android:id="@+id/shine2"
+                android:layout_width="50dp"
+                android:padding="4dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="-50dp"
+                android:src="@drawable/shine"/>
+            </RelativeLayout>
+        </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:text="AMBULANCE"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                ></TextView>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:background="@drawable/policebg"
+            android:orientation="vertical"
+            android:id="@+id/petrolbunklist"
+            android:padding="5dp"
+            android:layout_margin="10dp"
+
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="17dp"
+                android:gravity="center">
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/petrolbunk"
+                android:layout_gravity="center"
+                android:background="@drawable/petrolpump"
+               ></ImageView>
+                <ImageView
+                    android:id="@+id/shine3"
+                    android:layout_width="50dp"
+                    android:padding="4dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="-50dp"
+                    android:src="@drawable/shine"/>
+            </RelativeLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:text="PETROL BUNK"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                ></TextView>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+</LinearLayout>

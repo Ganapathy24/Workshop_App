@@ -3,6 +3,10 @@
 
     <string name="category">Choose your shop category</string>
 
+    <string name="nameerror">Enter a valid name</string>
+    <string name="mobileerror">Enter a valid mobile number</string>
+    <string name="shoperror">Enter a valid shopname</string>
+
     <string-array name="category_list">
         <item>WorkShop</item>
         <item>BatteryShop</item>

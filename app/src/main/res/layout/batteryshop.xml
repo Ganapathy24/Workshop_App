@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
+
     android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:background="@drawable/regbutton1"
+        android:background="@drawable/bluebutton"
         android:layout_margin="10dp"
-        android:elevation="20dp"
+        android:elevation="2dp"
         android:weightSum="2"
         android:layout_height="wrap_content">
         <ImageView
@@ -15,23 +16,24 @@
             android:layout_height="70dp"
             android:layout_gravity="center_vertical"
             android:background="@drawable/battery"
-            android:layout_marginHorizontal="20dp"></ImageView>
+            android:layout_margin="10dp"></ImageView>
         <LinearLayout
             android:layout_width="match_parent"
             android:id="@+id/btn1"
 
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_margin="6dp"
             android:orientation="vertical">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18dp"
+                android:textSize="20dp"
                 android:text="WORKSHOP 1"
-                android:layout_margin="5dp"
+                android:layout_margin="3dp"
                 android:textStyle="bold"
+
                 android:id="@+id/name"
-                android:background="#F0FFF0"
+                android:background="#ffffff"
                 android:textColor="#000000"
                 ></TextView>
             <TextView
@@ -39,9 +41,9 @@
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
                 android:text="Name of the person"
-                android:layout_margin="5dp"
+                android:layout_margin="3dp"
                 android:id="@+id/shop"
-                android:background="#F0FFF0"
+                android:background="#ffffff"
                 android:textColor="#000000"
                 ></TextView>
             <TextView
@@ -50,8 +52,8 @@
                 android:textSize="15dp"
                 android:text="Distance"
                 android:id="@+id/category"
-                android:layout_margin="5dp"
-                android:background="#F0FFF0"
+                android:layout_margin="3dp"
+                android:background="#ffffff"
                 android:textColor="#000000"
                 ></TextView>
             <!--       <TextView-->

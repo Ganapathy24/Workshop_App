@@ -22,6 +22,6 @@
         android:elevation="6dp"
         android:translationZ="9dp">
     </stroke>
-
+<corners android:radius="20dp"></corners>
 
 </shape>

@@ -13,13 +13,30 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Workshop">
-        <activity android:name=".Profile"></activity>
-        <activity android:name=".ServiceList" />
-        <activity android:name=".DetailsConfirmation" />
-        <activity android:name=".Services" />
-        <activity android:name=".Registration" />
-        <activity android:name=".MainActivity">
+        android:theme="@style/AppTheme">
+        <activity android:name=".Profile"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+
+            ></activity>
+        <activity android:name=".ServiceList"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            />
+        <activity android:name=".DetailsConfirmation"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            />
+        <activity android:name=".Services"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            />
+        <activity android:name=".Registration"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            />
+        <activity android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            />
+
+        <activity android:name="splashscreen"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

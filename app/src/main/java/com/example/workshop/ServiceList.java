@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -27,7 +28,7 @@ public class ServiceList extends AppCompatActivity {
 
     DatabaseReference reference;
     RecyclerView categoryList;
-
+    Button btn;
     ArrayList<UserEntity> list;
     CategoryAdapter adapter;
     @Override
@@ -36,6 +37,17 @@ public class ServiceList extends AppCompatActivity {
         setContentView(R.layout.activity_service_list);
 
         String category = getIntent().getStringExtra("category");
+
+        btn=(Button)findViewById(R.id.btn7);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent services = new Intent(ServiceList.this, Services.class);
+                startActivity(services);
+            }
+        });
 
         categoryList = (RecyclerView) findViewById(R.id.myRecycler);
         categoryList.setLayoutManager( new LinearLayoutManager(this));
@@ -56,6 +68,8 @@ public class ServiceList extends AppCompatActivity {
                 categoryList.setAdapter(adapter);
 
             }
+
+
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
