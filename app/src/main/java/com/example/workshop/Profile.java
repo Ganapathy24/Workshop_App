@@ -7,9 +7,11 @@ import androidx.core.content.ContextCompat;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.Location;
 import android.net.Uri;
 import android.os.Bundle;
 import android.telephony.SmsManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -19,7 +21,15 @@ public class Profile extends AppCompatActivity {
 
     ImageView img1,img2;
     String url;
+    String phone;
     private static final int MY_PERMISSIONS_REQUEST_SEND_SMS =0 ;
+
+//    @Override
+//    public void onBackPressed() {
+//        Intent a=new Intent(Profile.this,ServiceList.class);
+//        startActivity(a);
+//        return;
+//    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,10 +37,10 @@ public class Profile extends AppCompatActivity {
 
         String username = getIntent().getStringExtra("username");
         String sname = getIntent().getStringExtra("shopname");
-        String phone =getIntent().getStringExtra("phone");
+        phone = getIntent().getStringExtra("phone");
         String category = getIntent().getStringExtra("category");
-        String latitute = getIntent().getStringExtra("latitute");
-        String longitute = getIntent().getStringExtra("longitute");
+        double latitute = getIntent().getDoubleExtra("latitute", 0);
+        double longitute = getIntent().getDoubleExtra("longitute", 0);
 
         img1 = (ImageView) findViewById(R.id.img1);
         TextView name = findViewById(R.id.ownername);
@@ -44,7 +54,7 @@ public class Profile extends AppCompatActivity {
         img1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
                 Intent callIntent = new Intent(Intent.ACTION_CALL);
-                callIntent.setData(Uri.parse("tel:"+ phone));
+                callIntent.setData(Uri.parse("tel:" + phone));
                 if (ActivityCompat.checkSelfPermission(Profile.this,
                         Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                     ActivityCompat.requestPermissions(Profile.this, new String[]{Manifest.permission.CALL_PHONE}, 1);
@@ -55,56 +65,52 @@ public class Profile extends AppCompatActivity {
             }
         });
         img2 = (ImageView) findViewById(R.id.img2);
-
-
         img2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "https://maps.google.com/?q=<"+latitute+">,<"+longitute+">";
-                sendSMSMessage(url);
-                //Toast.makeText(Profile.this, "LOCATION SENT ", Toast.LENGTH_SHORT).show();
+                String url = "https://maps.google.com/?q=" + latitute + "," + longitute + "";
+                SendSms(url);
+                Toast.makeText(Profile.this, "LOCATION SENT ", Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(Intent.ACTION_VIEW);
                 i.setData(Uri.parse(url));
                 startActivity(i);
+//                Intent i = new Intent(Intent.);
+//                i.setData(Uri.parse(url));
+//                startActivity(i);
 //                Intent i = new Intent(Profile.this, GPS.class);
 //                startActivity(i);
             }
         });
     }
-    protected void sendSMSMessage(String url) {
 
-        this.url=url;
-
-        if (ContextCompat.checkSelfPermission(this,
-                Manifest.permission.SEND_SMS)
-                != PackageManager.PERMISSION_GRANTED) {
-            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
-                    Manifest.permission.SEND_SMS)) {
-            } else {
-                ActivityCompat.requestPermissions(this,
-                        new String[]{Manifest.permission.SEND_SMS},
-                        MY_PERMISSIONS_REQUEST_SEND_SMS);
-            }
-        }
+    public void SendSms(String location) {
+        SmsManager smsManager = SmsManager.getDefault();
+        StringBuffer smsBody = new StringBuffer();
+        smsBody.append(location);
+        Log.d("check",phone.toString());
+        smsManager.sendTextMessage(phone, null, smsBody.toString(), null, null);
     }
 
+
+
     @Override
-    public void onRequestPermissionsResult(int requestCode,String permissions[], int[] grantResults) {
-        switch (requestCode) {
-            case MY_PERMISSIONS_REQUEST_SEND_SMS: {
-                if (grantResults.length > 0
-                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    SmsManager smsManager = SmsManager.getDefault();
-                    smsManager.sendTextMessage( "9790432442", null, url, null, null);
-                    Toast.makeText(Profile.this, "SMS sent.",
-                            Toast.LENGTH_LONG).show();
-                } else {
-                    Toast.makeText(Profile.this,
-                            "SMS faild, please try again.", Toast.LENGTH_LONG).show();
-                    return;
+    public void onRequestPermissionsResult(int requestCode,String permissions[], int[] grantResults)
+        {
+            switch (requestCode) {
+                case MY_PERMISSIONS_REQUEST_SEND_SMS: {
+                    if (grantResults.length > 0
+                            && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                        SmsManager smsManager = SmsManager.getDefault();
+                        smsManager.sendTextMessage(phone, null, url, null, null);
+                        Toast.makeText(Profile.this, "SMS sent.",
+                                Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(Profile.this,
+                                "SMS faild, please try again.", Toast.LENGTH_LONG).show();
+                        return;
+                    }
                 }
             }
-        }
 
     }
 }

@@ -5,8 +5,8 @@ public class UserEntity {
     String category;
     String shopName;
     String phoneNumber;
-    String latitute;
-    String longitute;
+    double latitute;
+    double longitute;
 
     public void setName(String name) {
         this.name = name;
@@ -29,7 +29,7 @@ public class UserEntity {
     }
 
 
-    public UserEntity(String name, String shopName, String category, String phoneNumber, String latitute, String longitute) {
+    public UserEntity(String name, String shopName, String category, String phoneNumber, double latitute, double longitute) {
         this.name = name;
         this.shopName = shopName;
         this.phoneNumber = phoneNumber;
@@ -51,19 +51,19 @@ public class UserEntity {
         return phoneNumber;
     }
 
-    public String getLatitute() {
+    public double getLatitute() {
         return latitute;
     }
 
-    public void setLatitute(String latitute) {
+    public void setLatitute(double latitute) {
         this.latitute = latitute;
     }
 
-    public String getLongitute() {
+    public double getLongitute() {
         return longitute;
     }
 
-    public void setLongitute(String longitute) {
+    public void setLongitute(double longitute) {
         this.longitute = longitute;
     }
 }

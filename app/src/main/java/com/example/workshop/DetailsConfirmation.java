@@ -3,6 +3,7 @@ package com.example.workshop;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.JsonReader;
 import android.util.Log;
@@ -28,6 +29,13 @@ public class DetailsConfirmation extends AppCompatActivity {
     static int id = 1;
 
     @Override
+    public void onBackPressed() {
+        Intent a=new Intent(DetailsConfirmation.this,MainActivity.class);
+        startActivity(a);
+        return;
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details_confirmation);
@@ -35,8 +43,8 @@ public class DetailsConfirmation extends AppCompatActivity {
         String shopname = getIntent().getStringExtra("shopname");
         String category = getIntent().getStringExtra("category");
         String phoneNumber = getIntent().getStringExtra("phonenumber");
-        String latitude = getIntent().getStringExtra("latitude");
-        String longitude = getIntent().getStringExtra("longitude");
+        double latitude = getIntent().getDoubleExtra("latitude",0);
+        double longitude = getIntent().getDoubleExtra("longitude",0);
 
         Log.d("Data ", phoneNumber);
 
@@ -56,6 +64,8 @@ public class DetailsConfirmation extends AppCompatActivity {
 
 
         Gson gson = new Gson();
+
+
 
 
         submit_btn.setOnClickListener(new View.OnClickListener() {

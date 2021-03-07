@@ -29,14 +29,22 @@ import com.basgeekball.awesomevalidation.ValidationStyle;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
+import java.util.regex.Pattern;
 
 public class Registration extends AppCompatActivity {
 
     private static final int REQUEST_LOCATION = 1;
     LocationManager locationManager;
-    String latitude, longitude;
+    double latitude, longitude;
     private AwesomeValidation awesomeValidation;
     ImageView img, shine;
+
+    @Override
+    public void onBackPressed() {
+        Intent a=new Intent(Registration.this,MainActivity.class);
+        startActivity(a);
+        return;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,8 +93,9 @@ public class Registration extends AppCompatActivity {
                 new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCATION);
 
 
+
         awesomeValidation.addValidation(this, R.id.ownername, "^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$", R.string.nameerror);
-        awesomeValidation.addValidation(this, R.id.phonenumber, "^[2-9]{2}[0-9]{8}$", R.string.mobileerror);
+        awesomeValidation.addValidation(this, R.id.phonenumber, "^\\s*(?:\\+?(\\d{1,3}))?[-. (]*(\\d{3})[-. )]*(\\d{3})[-. ]*(\\d{4})(?: *x(\\d+))?\\s*$", R.string.mobileerror);
         awesomeValidation.addValidation(this, R.id.shopname, "^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$", R.string.shoperror);
 
 
@@ -125,6 +134,25 @@ public class Registration extends AppCompatActivity {
                 }
             }
 
+
+            private boolean validate() {
+
+                String MobilePattern = "[0-9]{10}";
+                if(phone_number.getText().toString().matches(MobilePattern)) {
+
+                    Toast.makeText(getApplicationContext(), "phone number is valid", Toast.LENGTH_SHORT).show();
+                    return true;
+
+                } else if(!phone_number.getText().toString().matches(MobilePattern)) {
+
+                    Toast.makeText(getApplicationContext(), "Please enter valid 10 digit phone number", Toast.LENGTH_SHORT).show();
+                    return false;
+                }
+                return false;
+            }
+
+
+
             private void OnGPS() {
                 final AlertDialog.Builder builder = new AlertDialog.Builder(Registration.this);
                 builder.setMessage("Enable GPS").setCancelable(false).setPositiveButton("Yes", new DialogInterface.OnClickListener() {
@@ -152,8 +180,8 @@ public class Registration extends AppCompatActivity {
                     if (locationGPS != null) {
                         double lat = locationGPS.getLatitude();
                         double longi = locationGPS.getLongitude();
-                        latitude = String.valueOf(lat);
-                        longitude = String.valueOf(longi);
+                        latitude = lat;
+                        longitude = longi;
                         Toast.makeText(Registration.this, "Your Location: " + "\n" + "Latitude: " + latitude + "\n" + "Longitude: " + longitude, Toast.LENGTH_SHORT).show();
                     } else {
                         Toast.makeText(Registration.this, "Unable to find location.", Toast.LENGTH_SHORT).show();

@@ -21,6 +21,13 @@ public class Services extends AppCompatActivity {
 
     ImageView workshop,shine,shine1,shine2,shine3,battery,ambulance,petrolbunk;
 
+
+    @Override
+    public void onBackPressed() {
+        Intent a=new Intent(Services.this,MainActivity.class);
+        startActivity(a);
+        return;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

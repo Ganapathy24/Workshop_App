@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg1"
+    android:background="@drawable/bggg8"
     android:label="Assignment"
     android:orientation="vertical">
 
@@ -33,7 +33,7 @@
             android:layout_gravity="center"
             android:layout_margin="30dp"
             android:background="@drawable/roundcorners1"
-            android:elevation="20dp"
+            android:elevation="2dp"
             android:orientation="vertical">
 
             <TextView
@@ -43,21 +43,21 @@
                 android:layout_margin="10dp"
                 android:inputType="number"
                 android:padding="4dp"
-                android:text="Owner Name:"
+                android:text="Shop Name:"
                 android:textColor="#000000"
-                android:textSize="20dp" />
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/sName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:hint="Shop Name:"
+                android:hint="Location :"
                 android:inputType="text"
                 android:padding="4dp"
                 android:textColor="#000000"
                 android:textColorHint="#000000"
-                android:textSize="20dp" />
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/categoryId"
@@ -69,7 +69,7 @@
                 android:text="Category:"
                 android:textColor="#000000"
                 android:textColorHint="@color/colorPrimary"
-                android:textSize="20dp" />
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/pNumber"
@@ -80,7 +80,7 @@
                 android:padding="4dp"
                 android:text="Phone Number:"
                 android:textColor="#000000"
-                android:textSize="20dp" />
+                android:textSize="15dp"/>
 
             <TextView
                 android:id="@+id/location"
@@ -90,10 +90,9 @@
                 android:hint="Remarks"
                 android:inputType="text"
                 android:padding="4dp"
-                android:text="Location:"
+                android:text="Location URL:"
                 android:textColor="#000000"
-
-                android:textSize="20dp" />
+                android:textSize="15dp" />
 
 
         </LinearLayout>

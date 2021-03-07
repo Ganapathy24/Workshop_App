@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:background="@drawable/bggg9"
+    android:background="@drawable/bggg5"
     android:gravity="center"
     android:layout_height="match_parent">
 
@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:text="Your Profile"
         android:gravity="center"
-        android:textSize="25dp"
+        android:textSize="35dp"
         android:textStyle="italic"
         android:layout_margin="20dp"
         android:textColor="#000000"
@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
         android:background="@drawable/regbutton1"
         android:padding="20dp"
         android:orientation="vertical"
@@ -32,52 +32,23 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="NAME :"
-        android:layout_margin="10dp"
-        android:textSize="20dp"
-        android:textStyle="bold"
+        android:text="Shop Name :"
+        android:layout_margin="1dp"
+        android:textSize="15dp"
+        android:textStyle="italic"
         android:textColor="#000000"
         ></TextView>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="10dp"
+        android:padding="5dp"
         android:id="@+id/ownername"
         android:gravity="center"
-        android:textSize="15dp"
-        android:hint="Owners name"
+        android:textSize="18dp"
+        android:hint="Shop name"
         android:textStyle="bold"
-        android:layout_margin="8dp"
-        android:textColor="#000000"
-        ></TextView>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SHOP NAME :"
-
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:layout_margin="10dp"
-        android:textColor="#000000"
-        ></TextView>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:text=""
-        android:gravity="center"
-        android:textSize="15dp"
-        android:hint="Shops Name"
-        android:textStyle="bold"
-        android:id="@id/shopname"
-        android:layout_margin="10dp"
+        android:layout_margin="1dp"
         android:textColor="#000000"
         ></TextView>
     </LinearLayout>
@@ -89,9 +60,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Location :"
-        android:layout_margin="10dp"
-        android:textSize="20dp"
+        android:textSize="16dp"
+        android:textStyle="italic"
+        android:layout_margin="3dp"
+        android:textColor="#000000"
+        ></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text=""
+        android:gravity="center"
+        android:textSize="15dp"
+        android:hint="Location"
         android:textStyle="bold"
+        android:id="@id/shopname"
+        android:layout_margin="3dp"
+        android:textColor="#000000"
+        ></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOCATION URL :"
+        android:layout_margin="3dp"
+        android:textSize="12dp"
+        android:textStyle="italic"
         android:textColor="#000000"
         ></TextView>
 
@@ -100,11 +99,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/location"
         android:hint="LOCATION OF THE WORKSHOP"
-        android:gravity="center"
         android:textSize="10dp"
         android:textStyle="bold"
-        android:layout_margin="10dp"
-        android:padding="10dp"
+        android:layout_margin="3dp"
+        android:padding="5dp"
         android:textColor="#000000"
         ></TextView>
     </LinearLayout>
